@@ -27,12 +27,6 @@ export function mo<Theme extends BaseTheme = BaseTheme, Target = unknown>(
         subtree: true,
         childList: true,
       })
-
-      // handle class attribute on target
-      handleClassAttributeChange(target as Element)
-
-      // handle children of target
-      handleMutationRecords([{ target, type: '' }])
     },
     disconnect() {
       observer.disconnect()
